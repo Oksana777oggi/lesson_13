@@ -1,0 +1,138 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* по умолчанию */
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	/* font-family:""; */
+	font-family: "Roboto";
+	font-size: 30px;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/* ------------------------------ */
+.conteiner{
+	width: 800px;
+	margin: 0 auto;
+}
+
+.sun{
+	width: 200px;
+	height: 200px;
+	margin: auto 0;
+	position: relative;
+	animation-name: sun;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	z-index: 2;
+}
+
+@keyframes sun{
+	0%{
+	left: 0%;
+	}
+	100%{
+	left: 70%;
+	}
+	}
+
+.cloud{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	z-index: 1;	
+	animation-name: cloud;
+	animation-duration: 3s;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+.cloud-little{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	animation-name: cloud;
+	animation-duration: 3s;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes cloud{
+
+	0%{
+	left: 0%;
+	}
+	70%{
+	left: 50%;
+	}
+	}
+
+.road{
+	position: relative;
+	top: -200px;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.car {
+	position: relative;
+	width: 200px;
+	z-index: 2;
+	bottom: -100px;
+	right: -300px;
+	animation-name: car;
+	animation-duration: 5s;
+	animation-direction: normal;
+	animation-iteration-count: infinite;
+}
+
+@keyframes car{  
+	to {
+		transform: translate3d(0, 400%, 0) scale(5);
+	  }
+}
